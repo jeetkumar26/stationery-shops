@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stationery — The Ink &amp; Page Shop</title>
+    <meta name="description"
+        content="Discover premium notebooks, planners, pens, and art supplies at The Ink &amp; Page Shop." />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="navbar-light-page">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-book-half me-2 icon-teal"></i>The Ink &amp; Page Shop
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="stationery.html">Stationery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <button class="cart-btn" data-bs-toggle="offcanvas" data-bs-target="#cartPanel">
+                    <i class="bi bi-bag"></i>
+                    <span>Cart</span>
+                    <span class="cart-badge" style="display:none;">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <div class="page-header">
+        <span class="section-label">Write Beautifully</span>
+        <h1>Stationery</h1>
+        <p>Premium notebooks, pens, planners, and art supplies for every creative pursuit.</p>
+    </div>
+
+    <!-- ===== CATALOG ===== -->
+    <section class="section-catalog">
+        <div class="container">
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="notebooks">Notebooks</button>
+                <button class="filter-tab" data-filter="pens">Pens</button>
+                <button class="filter-tab" data-filter="planners">Planners</button>
+                <button class="filter-tab" data-filter="art">Art Supplies</button>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up" data-category="notebooks">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1585779034823-7e9ac8faec70?w=400&q=80"
+                                alt="Artisan Leather Notebook">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Notebook</div>
+                            <div class="product-card-title">Artisan Leather Notebook</div>
+                            <div class="product-card-desc">Handcrafted, 240 ivory pages, lay-flat binding</div>
+                            <div class="product-card-price">$34.50</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'stat-1',name:'Artisan Leather Notebook',price:34.50,image:'https://images.unsplash.com/photo-1585779034823-7e9ac8faec70?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-1"
+                    data-category="notebooks">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=400&q=80"
+                                alt="Dotted Bullet Journal">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Notebook</div>
+                            <div class="product-card-title">Dotted Bullet Journal</div>
+                            <div class="product-card-desc">A5 size, 200 pages, hardcover, dot grid layout</div>
+                            <div class="product-card-price">$22.50</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'stat-2',name:'Dotted Bullet Journal',price:22.50,image:'https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-2" data-category="pens">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1601628828688-632f38a5a7d0?w=400&q=80"
+                                alt="Calligraphy Pen Set">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Pens</div>
+                            <div class="product-card-title">Calligraphy Pen Set</div>
+                            <div class="product-card-desc">6 nib sizes, ink cartridges, and practice guide</div>
+                            <div class="product-card-price">$27.00</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'stat-3',name:'Calligraphy Pen Set',price:27.00,image:'https://images.unsplash.com/photo-1601628828688-632f38a5a7d0?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-3"
+                    data-category="planners">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&q=80"
+                                alt="2025 Weekly Planner">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Planner</div>
+                            <div class="product-card-title">2025 Weekly Planner</div>
+                            <div class="product-card-desc">Linen cover, weekly + monthly views, habit tracker</div>
+                            <div class="product-card-price">$29.99</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'stat-4',name:'2025 Weekly Planner',price:29.99,image:'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up" data-category="art">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=400&q=80"
+                                alt="Watercolor Set">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Art Supplies</div>
+                            <div class="product-card-title">24-Color Watercolor Set</div>
+                            <div class="product-card-desc">Artist-grade pigments, includes 3 brushes and palette</div>
+                            <div class="product-card-price">$38.00</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'stat-5',name:'24-Color Watercolor Set',price:38.00,image:'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-1" data-category="pens">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=400&q=80"
+                                alt="Fine Liner Set">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Pens</div>
+                            <div class="product-card-title">Fine Liner 10-Pack</div>
+                            <div class="product-card-desc">Archival-quality ink, 0.1–1.0mm tips, acid-free</div>
+                            <div class="product-card-price">$19.50</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'stat-6',name:'Fine Liner 10-Pack',price:19.50,image:'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-2"
+                    data-category="planners">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=400&q=80"
+                                alt="Daily Desk Planner Pad">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Planner</div>
+                            <div class="product-card-title">Daily Desk Planner Pad</div>
+                            <div class="product-card-desc">60-page tear-off pad, daily task + priority layout</div>
+                            <div class="product-card-price">$16.00</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'stat-7',name:'Daily Desk Planner Pad',price:16.00,image:'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-3" data-category="art">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1561732068-4c97d5826e1b?w=400&q=80"
+                                alt="Colored Pencils">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Art Supplies</div>
+                            <div class="product-card-title">Professional Colored Pencils</div>
+                            <div class="product-card-desc">48 vibrant shades, oil-based cores, cedar wood case</div>
+                            <div class="product-card-price">$45.00</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'stat-8',name:'Professional Colored Pencils',price:45.00,image:'https://images.unsplash.com/photo-1561732068-4c97d5826e1b?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up" data-category="notebooks">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=80"
+                                alt="Kraft Hardcover Notebook">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Notebook</div>
+                            <div class="product-card-title">Kraft Hardcover Notebook</div>
+                            <div class="product-card-desc">B5 size, ruled pages, ribbon bookmark, elastic band</div>
+                            <div class="product-card-price">$14.99</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'stat-9',name:'Kraft Hardcover Notebook',price:14.99,image:'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-1" data-category="pens">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=400&q=80"
+                                alt="Metallic Gel Pen Set">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Pens</div>
+                            <div class="product-card-title">Metallic Gel Pen Set</div>
+                            <div class="product-card-desc">12 metallic colors, smooth flow on dark paper</div>
+                            <div class="product-card-price">$13.50</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'stat-10',name:'Metallic Gel Pen Set',price:13.50,image:'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-2"
+                    data-category="planners">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&q=80"
+                                alt="Goal Setting Journal">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Planner</div>
+                            <div class="product-card-title">Goal Setting Journal</div>
+                            <div class="product-card-desc">90-day structure, vision board pages, weekly reflection</div>
+                            <div class="product-card-price">$32.00</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'stat-11',name:'Goal Setting Journal',price:32.00,image:'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-3" data-category="art">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&q=80"
+                                alt="Washi Tape Collection">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Art Supplies</div>
+                            <div class="product-card-title">Washi Tape Collection</div>
+                            <div class="product-card-desc">20 rolls of decorative washi tape, assorted patterns</div>
+                            <div class="product-card-price">$18.00</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'stat-12',name:'Washi Tape Collection',price:18.00,image:'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <nav class="d-flex justify-content-center mt-5">
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#">← Prev</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next →</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="footer-brand"><i class="bi bi-book-half me-2 icon-teal"></i>The Ink &amp; Page Shop
+                    </div>
+                    <p class="footer-desc">A curated bookstore and stationery boutique for readers, writers, and
+                        creative minds.</p>
+                    <div class="footer-social mt-3">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <div class="footer-heading">Shop</div>
+                    <ul class="footer-links">
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="stationery.html">Stationery</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Bestsellers</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <div class="footer-heading">Info</div>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-heading">Visit Us</div>
+                    <p class="footer-contact-item"><i class="bi bi-geo-alt me-2 icon-teal"></i>42 Bookbinder Lane,
+                        London W11</p>
+                    <p class="footer-contact-item"><i class="bi bi-telephone me-2 icon-teal"></i>+44 20 7946 0123</p>
+                    <p class="footer-contact-item"><i class="bi bi-envelope me-2 icon-teal"></i>hello@inkandpageshop.com
+                    </p>
+                </div>
+            </div>
+            <hr class="footer-divider" />
+            <p class="footer-copy text-center mb-0">© 2025 The Ink &amp; Page Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel" style="width:380px;max-width:96vw;">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title"><i class="bi bi-bag me-2 icon-teal"></i>Your Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body" style="padding:0 1.25rem;overflow-y:auto;">
+            <div id="cart-items-container"></div>
+        </div>
+        <div id="cart-footer" class="cart-footer" style="padding:1.25rem;display:none;">
+            <div class="cart-subtotal">
+                <span class="cart-subtotal-label">Subtotal</span>
+                <span class="cart-subtotal-value" id="cart-subtotal">$0.00</span>
+            </div>
+            <button id="checkout-btn" class="btn-teal w-100 mb-2">
+                <i class="bi bi-credit-card me-2"></i>Proceed to Checkout
+            </button>
+            <button class="btn-outline-dark-custom w-100" style="font-size:0.82rem;padding:0.55rem 1rem;"
+                data-bs-dismiss="offcanvas">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

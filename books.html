@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books — The Ink &amp; Page Shop</title>
+    <meta name="description"
+        content="Browse our curated collection of books — fiction, non-fiction, classics, children's books and more." />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="navbar-light-page">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-book-half me-2 icon-teal"></i>The Ink &amp; Page Shop
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="books.html">Books</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stationery.html">Stationery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <button class="cart-btn" data-bs-toggle="offcanvas" data-bs-target="#cartPanel">
+                    <i class="bi bi-bag"></i>
+                    <span>Cart</span>
+                    <span class="cart-badge" style="display:none;">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <div class="page-header">
+        <span class="section-label">Our Collection</span>
+        <h1>Books</h1>
+        <p>From timeless classics to modern page-turners — explore our handpicked selection.</p>
+    </div>
+
+    <!-- ===== CATALOG ===== -->
+    <section class="section-catalog">
+        <div class="container">
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs" id="book-filters">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="fiction">Fiction</button>
+                <button class="filter-tab" data-filter="nonfiction">Non-Fiction</button>
+                <button class="filter-tab" data-filter="classics">Classics</button>
+                <button class="filter-tab" data-filter="children">Children's</button>
+                <button class="filter-tab" data-filter="biography">Biography</button>
+            </div>
+
+            <div class="row g-4" id="books-grid">
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up" data-category="fiction">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&q=80"
+                                alt="The Midnight Library">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Fiction</div>
+                            <div class="product-card-title">The Midnight Library</div>
+                            <div class="product-card-author">Matt Haig</div>
+                            <div class="product-card-stars">★★★★★ <span class="review-count">(4.1k)</span></div>
+                            <div class="product-card-price">$16.99</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'book-1',name:'The Midnight Library',price:16.99,image:'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-1"
+                    data-category="nonfiction">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=400&q=80"
+                                alt="Atomic Habits">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Non-Fiction</div>
+                            <div class="product-card-title">Atomic Habits</div>
+                            <div class="product-card-author">James Clear</div>
+                            <div class="product-card-stars">★★★★★ <span class="review-count">(8.2k)</span></div>
+                            <div class="product-card-price">$18.99</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'book-2',name:'Atomic Habits',price:18.99,image:'https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-2"
+                    data-category="classics">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=400&q=80"
+                                alt="1984">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Classics</div>
+                            <div class="product-card-title">1984</div>
+                            <div class="product-card-author">George Orwell</div>
+                            <div class="product-card-stars">★★★★★ <span class="review-count">(6.7k)</span></div>
+                            <div class="product-card-price">$12.99</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'book-3',name:'1984',price:12.99,image:'https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-3"
+                    data-category="classics">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&q=80"
+                                alt="To Kill a Mockingbird">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Classics</div>
+                            <div class="product-card-title">To Kill a Mockingbird</div>
+                            <div class="product-card-author">Harper Lee</div>
+                            <div class="product-card-stars">★★★★★ <span class="review-count">(5.3k)</span></div>
+                            <div class="product-card-price">$14.99</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'book-4',name:'To Kill a Mockingbird',price:14.99,image:'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up" data-category="fiction">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=400&q=80"
+                                alt="The Alchemist">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Fiction</div>
+                            <div class="product-card-title">The Alchemist</div>
+                            <div class="product-card-author">Paulo Coelho</div>
+                            <div class="product-card-stars">★★★★★ <span class="review-count">(9.0k)</span></div>
+                            <div class="product-card-price">$13.99</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'book-5',name:'The Alchemist',price:13.99,image:'https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-1"
+                    data-category="nonfiction">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&q=80"
+                                alt="Educated">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Non-Fiction</div>
+                            <div class="product-card-title">Educated</div>
+                            <div class="product-card-author">Tara Westover</div>
+                            <div class="product-card-stars">★★★★★ <span class="review-count">(3.8k)</span></div>
+                            <div class="product-card-price">$15.99</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'book-6',name:'Educated',price:15.99,image:'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-2"
+                    data-category="children">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&q=80"
+                                alt="The Little Prince">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Children's</div>
+                            <div class="product-card-title">The Little Prince</div>
+                            <div class="product-card-author">Antoine de Saint-Exupéry</div>
+                            <div class="product-card-stars">★★★★★ <span class="review-count">(7.2k)</span></div>
+                            <div class="product-card-price">$11.99</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'book-7',name:'The Little Prince',price:11.99,image:'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-3"
+                    data-category="biography">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&q=80"
+                                alt="The Diary of a Young Girl">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Biography</div>
+                            <div class="product-card-title">The Diary of a Young Girl</div>
+                            <div class="product-card-author">Anne Frank</div>
+                            <div class="product-card-stars">★★★★★ <span class="review-count">(5.9k)</span></div>
+                            <div class="product-card-price">$13.50</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'book-8',name:'The Diary of a Young Girl',price:13.50,image:'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up" data-category="fiction">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=400&q=80"
+                                alt="Normal People">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Fiction</div>
+                            <div class="product-card-title">Normal People</div>
+                            <div class="product-card-author">Sally Rooney</div>
+                            <div class="product-card-stars">★★★★☆ <span class="review-count">(2.6k)</span></div>
+                            <div class="product-card-price">$15.99</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'book-9',name:'Normal People',price:15.99,image:'https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-1"
+                    data-category="nonfiction">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&q=80"
+                                alt="Sapiens">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Non-Fiction</div>
+                            <div class="product-card-title">Sapiens</div>
+                            <div class="product-card-author">Yuval Noah Harari</div>
+                            <div class="product-card-stars">★★★★★ <span class="review-count">(10k+)</span></div>
+                            <div class="product-card-price">$17.99</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'book-10',name:'Sapiens',price:17.99,image:'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-2"
+                    data-category="children">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1550399105-c4db5fb85c18?w=400&q=80"
+                                alt="Charlotte's Web">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Children's</div>
+                            <div class="product-card-title">Charlotte's Web</div>
+                            <div class="product-card-author">E.B. White</div>
+                            <div class="product-card-stars">★★★★★ <span class="review-count">(4.4k)</span></div>
+                            <div class="product-card-price">$10.99</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'book-11',name:'Charlotte\'s Web',price:10.99,image:'https://images.unsplash.com/photo-1550399105-c4db5fb85c18?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 product-card-wrap fade-up fade-up-delay-3"
+                    data-category="classics">
+                    <div class="product-card">
+                        <div class="product-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1630482812050-7b3ef418ab7a?w=400&q=80"
+                                alt="Pride and Prejudice">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-label">Classics</div>
+                            <div class="product-card-title">Pride and Prejudice</div>
+                            <div class="product-card-author">Jane Austen</div>
+                            <div class="product-card-stars">★★★★★ <span class="review-count">(7.8k)</span></div>
+                            <div class="product-card-price">$11.50</div>
+                            <button class="btn-add-cart"
+                                onclick="addToCart({id:'book-12',name:'Pride and Prejudice',price:11.50,image:'https://images.unsplash.com/photo-1630482812050-7b3ef418ab7a?w=200&q=60'})">
+                                <i class="bi bi-bag-plus me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <nav class="d-flex justify-content-center mt-5">
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#">← Prev</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next →</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="footer-brand"><i class="bi bi-book-half me-2 icon-teal"></i>The Ink &amp; Page Shop
+                    </div>
+                    <p class="footer-desc">A curated bookstore and stationery boutique for readers, writers, and
+                        creative minds.</p>
+                    <div class="footer-social mt-3">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <div class="footer-heading">Shop</div>
+                    <ul class="footer-links">
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="stationery.html">Stationery</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Bestsellers</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <div class="footer-heading">Info</div>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-heading">Visit Us</div>
+                    <p class="footer-contact-item"><i class="bi bi-geo-alt me-2 icon-teal"></i>42 Bookbinder Lane,
+                        London W11</p>
+                    <p class="footer-contact-item"><i class="bi bi-telephone me-2 icon-teal"></i>+44 20 7946 0123</p>
+                    <p class="footer-contact-item"><i class="bi bi-envelope me-2 icon-teal"></i>hello@inkandpageshop.com
+                    </p>
+                </div>
+            </div>
+            <hr class="footer-divider" />
+            <p class="footer-copy text-center mb-0">© 2025 The Ink &amp; Page Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel" style="width:380px;max-width:96vw;">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title"><i class="bi bi-bag me-2 icon-teal"></i>Your Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body" style="padding:0 1.25rem;overflow-y:auto;">
+            <div id="cart-items-container"></div>
+        </div>
+        <div id="cart-footer" class="cart-footer" style="padding:1.25rem;display:none;">
+            <div class="cart-subtotal">
+                <span class="cart-subtotal-label">Subtotal</span>
+                <span class="cart-subtotal-value" id="cart-subtotal">$0.00</span>
+            </div>
+            <button id="checkout-btn" class="btn-teal w-100 mb-2">
+                <i class="bi bi-credit-card me-2"></i>Proceed to Checkout
+            </button>
+            <button class="btn-outline-dark-custom w-100" style="font-size:0.82rem;padding:0.55rem 1rem;"
+                data-bs-dismiss="offcanvas">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

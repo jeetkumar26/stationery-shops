@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — The Ink &amp; Page Shop</title>
+    <meta name="description" content="Get in touch with The Ink &amp; Page Shop. We'd love to hear from you." />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="navbar-light-page">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-book-half me-2 icon-teal"></i>The Ink &amp; Page Shop
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stationery.html">Stationery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <button class="cart-btn" data-bs-toggle="offcanvas" data-bs-target="#cartPanel">
+                    <i class="bi bi-bag"></i>
+                    <span>Cart</span>
+                    <span class="cart-badge" style="display:none;">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <div class="page-header">
+        <span class="section-label">We're Here for You</span>
+        <h1>Contact Us</h1>
+        <p>Questions, feedback, or just want to chat about books? We'd love to hear from you.</p>
+    </div>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section-contact">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+
+                <!-- Contact Form -->
+                <div class="col-lg-7 fade-up">
+                    <div class="contact-form-wrap">
+                        <h3 class="section-h3">Send Us a Message</h3>
+                        <p style="color:#777;font-size:0.9rem;margin-bottom:1.75rem;">We usually respond within 24 hours
+                            on business days.</p>
+
+                        <form id="contact-form" novalidate>
+                            <div class="row g-3">
+
+                                <div class="col-sm-6">
+                                    <label class="form-label" for="fname">First Name</label>
+                                    <input type="text" class="form-control" id="fname" placeholder="Jane" required
+                                        minlength="2">
+                                    <div class="invalid-feedback">Please enter your first name.</div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label class="form-label" for="lname">Last Name</label>
+                                    <input type="text" class="form-control" id="lname" placeholder="Doe" required
+                                        minlength="2">
+                                    <div class="invalid-feedback">Please enter your last name.</div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label" for="email">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="jane@example.com"
+                                        required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label" for="subject">Subject</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="" disabled selected>Select a subject</option>
+                                        <option>Order enquiry</option>
+                                        <option>Product question</option>
+                                        <option>Returns &amp; refunds</option>
+                                        <option>Book recommendation</option>
+                                        <option>Events &amp; workshops</option>
+                                        <option>Other</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a subject.</div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label" for="message">Message</label>
+                                    <textarea class="form-control" id="message" rows="5"
+                                        placeholder="Tell us what's on your mind..." required minlength="20"
+                                        style="resize:vertical;"></textarea>
+                                    <div class="invalid-feedback">Please write a message (at least 20 characters).</div>
+                                </div>
+
+                                <div class="col-12 mt-2">
+                                    <button type="submit" class="btn-teal"
+                                        style="padding:0.85rem 2.5rem;font-size:0.95rem;">
+                                        <i class="bi bi-send me-2"></i>Send Message
+                                    </button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Store Info -->
+                <div class="col-lg-5 fade-up fade-up-delay-2">
+                    <div style="padding:0.5rem 0;">
+
+                        <h3 class="section-h3-spaced">Store Information</h3>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div>
+                                <div class="info-label">Address</div>
+                                <div class="info-value">42 Bookbinder Lane<br>Notting Hill, London W11 2HQ<br>United
+                                    Kingdom</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="bi bi-telephone-fill"></i></div>
+                            <div>
+                                <div class="info-label">Phone</div>
+                                <div class="info-value">+44 20 7946 0123</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="bi bi-envelope-fill"></i></div>
+                            <div>
+                                <div class="info-label">Email</div>
+                                <div class="info-value">hello@inkandpageshop.com</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="bi bi-clock-fill"></i></div>
+                            <div>
+                                <div class="info-label">Opening Hours</div>
+                                <div class="info-value">
+                                    Mon – Fri: 9:00am – 7:00pm<br>
+                                    Saturday: 9:00am – 8:00pm<br>
+                                    Sunday: 10:00am – 5:00pm
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div style="margin-top:2rem;">
+                            <div class="follow-heading">Follow Us</div>
+                            <div class="d-flex gap-2">
+                                <a href="#" class="contact-social-btn"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="contact-social-btn"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#" class="contact-social-btn"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="contact-social-btn"><i class="bi bi-pinterest"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Map Placeholder -->
+                        <div class="map-placeholder">
+                            <i class="bi bi-map"></i>
+                            <span>42 Bookbinder Lane, Notting Hill, London</span>
+                            <a href="https://maps.google.com" target="_blank">Open in Google Maps →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ TEASER ===== -->
+    <section class="section-faq">
+        <div class="container">
+            <div class="text-center mb-5 fade-up">
+                <span class="section-label">Quick Answers</span>
+                <h2 class="section-title">Frequently Asked</h2>
+            </div>
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-6 col-lg-4 fade-up fade-up-delay-1">
+                    <div class="faq-card">
+                        <h6>Do you ship internationally?</h6>
+                        <p>Yes! We ship to over 40 countries. Standard international delivery takes 7–14 business days.
+                            Free shipping on orders over £60.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-up fade-up-delay-2">
+                    <div class="faq-card">
+                        <h6>What is your return policy?</h6>
+                        <p>We accept returns within 30 days of delivery. Items must be unused and in original packaging.
+                            Contact us to initiate a return.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-up fade-up-delay-3">
+                    <div class="faq-card">
+                        <h6>Can I get a book recommendation?</h6>
+                        <p>Absolutely! Tell us what genres or books you've loved, and our team will put together a
+                            personalised recommendation list just for you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="footer-brand"><i class="bi bi-book-half me-2 icon-teal"></i>The Ink &amp; Page Shop
+                    </div>
+                    <p class="footer-desc">A curated bookstore and stationery boutique for readers, writers, and
+                        creative minds.</p>
+                    <div class="footer-social mt-3">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <div class="footer-heading">Shop</div>
+                    <ul class="footer-links">
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="stationery.html">Stationery</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Bestsellers</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <div class="footer-heading">Info</div>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-heading">Visit Us</div>
+                    <p class="footer-contact-item"><i class="bi bi-geo-alt me-2 icon-teal"></i>42 Bookbinder Lane,
+                        London W11</p>
+                    <p class="footer-contact-item"><i class="bi bi-telephone me-2 icon-teal"></i>+44 20 7946 0123</p>
+                    <p class="footer-contact-item"><i class="bi bi-envelope me-2 icon-teal"></i>hello@inkandpageshop.com
+                    </p>
+                </div>
+            </div>
+            <hr class="footer-divider" />
+            <p class="footer-copy text-center mb-0">© 2025 The Ink &amp; Page Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel" style="width:380px;max-width:96vw;">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title"><i class="bi bi-bag me-2 icon-teal"></i>Your Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body" style="padding:0 1.25rem;overflow-y:auto;">
+            <div id="cart-items-container"></div>
+        </div>
+        <div id="cart-footer" class="cart-footer" style="padding:1.25rem;display:none;">
+            <div class="cart-subtotal">
+                <span class="cart-subtotal-label">Subtotal</span>
+                <span class="cart-subtotal-value" id="cart-subtotal">$0.00</span>
+            </div>
+            <button id="checkout-btn" class="btn-teal w-100 mb-2">
+                <i class="bi bi-credit-card me-2"></i>Proceed to Checkout
+            </button>
+            <button class="btn-outline-dark-custom w-100" style="font-size:0.82rem;padding:0.55rem 1rem;"
+                data-bs-dismiss="offcanvas">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Ink &amp; Page Shop — Where Every Page Tells a Story</title>
+  <meta name="description" content="A curated bookstore and stationery shop. Discover handpicked books, premium notebooks, and artful stationery." />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg fixed-top" id="main-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-book-half me-2 icon-teal"></i>The Ink &amp; Page Shop
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+        <li class="nav-item"><a class="nav-link" href="stationery.html">Stationery</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <button class="cart-btn" data-bs-toggle="offcanvas" data-bs-target="#cartPanel">
+        <i class="bi bi-bag"></i>
+        <span>Cart</span>
+        <span class="cart-badge" style="display:none;">0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <span class="section-label">Welcome to our shop</span>
+        <h1 class="hero-headline mb-4">
+          Where Every<br><span>Page Tells</span><br>a Story
+        </h1>
+        <p class="hero-subtext mb-5">
+          Discover handpicked books and premium stationery, curated for readers, writers, and creative souls who believe in the power of the written word.
+        </p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="books.html" class="btn-teal text-decoration-none">Browse Books</a>
+          <a href="stationery.html" class="btn-outline-dark-custom text-decoration-none">Shop Stationery</a>
+        </div>
+        <div class="d-flex gap-4 mt-5 flex-wrap align-items-center">
+          <div>
+            <div class="hero-stat-number">500+</div>
+            <div class="hero-stat-label">Book Titles</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div>
+            <div class="hero-stat-number">200+</div>
+            <div class="hero-stat-label">Stationery Items</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div>
+            <div class="hero-stat-number">10K+</div>
+            <div class="hero-stat-label">Happy Customers</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 hero-visual d-none d-lg-block">
+        <div class="hero-book-stack">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=320&q=80" alt="Books">
+          <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=320&q=80" alt="Stationery">
+          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=320&q=80" alt="Notebook">
+          <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=320&q=80" alt="Library">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED PRODUCTS CAROUSEL ===== -->
+<section class="featured-carousel-section">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="section-label">Hand-Picked For You</span>
+      <h2 class="section-title">Featured Picks</h2>
+    </div>
+    <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel" style="position:relative;">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-card mx-auto" style="max-width:780px;">
+            <img class="carousel-card-img" src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=600&q=80" alt="The Midnight Library">
+            <div class="carousel-card-body">
+              <div class="carousel-card-type">📚 Fiction</div>
+              <h3 class="carousel-card-title">The Midnight Library</h3>
+              <p class="carousel-card-sub">by Matt Haig</p>
+              <p class="carousel-card-desc">Between life and death there is a library. Within that library, the shelves go on forever...</p>
+              <div class="carousel-card-price">$16.99</div>
+              <button class="btn-teal" onclick="addToCart({id:'book-featured-1',name:'The Midnight Library',price:16.99,image:'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=200&q=60'})">
+                <i class="bi bi-bag-plus me-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="carousel-card mx-auto" style="max-width:780px;">
+            <img class="carousel-card-img" src="https://images.unsplash.com/photo-1585779034823-7e9ac8faec70?w=600&q=80" alt="Premium Notebook">
+            <div class="carousel-card-body">
+              <div class="carousel-card-type">✏️ Stationery</div>
+              <h3 class="carousel-card-title">Artisan Leather Notebook</h3>
+              <p class="carousel-card-sub">Premium Collection</p>
+              <p class="carousel-card-desc">Handcrafted leather cover, 240 ivory pages, lay-flat binding. The perfect companion for your thoughts.</p>
+              <div class="carousel-card-price">$34.50</div>
+              <button class="btn-teal" onclick="addToCart({id:'stat-featured-1',name:'Artisan Leather Notebook',price:34.50,image:'https://images.unsplash.com/photo-1585779034823-7e9ac8faec70?w=200&q=60'})">
+                <i class="bi bi-bag-plus me-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="carousel-card mx-auto" style="max-width:780px;">
+            <img class="carousel-card-img" src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=600&q=80" alt="Atomic Habits">
+            <div class="carousel-card-body">
+              <div class="carousel-card-type">📚 Non-Fiction</div>
+              <h3 class="carousel-card-title">Atomic Habits</h3>
+              <p class="carousel-card-sub">by James Clear</p>
+              <p class="carousel-card-desc">A proven framework for improving every day. Transform your habits with tiny changes that yield remarkable results.</p>
+              <div class="carousel-card-price">$18.99</div>
+              <button class="btn-teal" onclick="addToCart({id:'book-featured-2',name:'Atomic Habits',price:18.99,image:'https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=200&q=60'})">
+                <i class="bi bi-bag-plus me-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <div class="carousel-card mx-auto" style="max-width:780px;">
+            <img class="carousel-card-img" src="https://images.unsplash.com/photo-1601628828688-632f38a5a7d0?w=600&q=80" alt="Calligraphy Pen Set">
+            <div class="carousel-card-body">
+              <div class="carousel-card-type">✏️ Stationery</div>
+              <h3 class="carousel-card-title">Calligraphy Pen Set</h3>
+              <p class="carousel-card-sub">Artisan Series</p>
+              <p class="carousel-card-desc">A curated set of 6 nib sizes with ink cartridges and a practice guide. Elevate your handwriting.</p>
+              <div class="carousel-card-price">$27.00</div>
+              <button class="btn-teal" onclick="addToCart({id:'stat-featured-2',name:'Calligraphy Pen Set',price:27.00,image:'https://images.unsplash.com/photo-1601628828688-632f38a5a7d0?w=200&q=60'})">
+                <i class="bi bi-bag-plus me-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="carousel-item">
+          <div class="carousel-card mx-auto" style="max-width:780px;">
+            <img class="carousel-card-img" src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=600&q=80" alt="The Alchemist">
+            <div class="carousel-card-body">
+              <div class="carousel-card-type">📚 Classics</div>
+              <h3 class="carousel-card-title">The Alchemist</h3>
+              <p class="carousel-card-sub">by Paulo Coelho</p>
+              <p class="carousel-card-desc">A magical fable about following your dreams. One of the best-selling books in history — and for good reason.</p>
+              <div class="carousel-card-price">$13.99</div>
+              <button class="btn-teal" onclick="addToCart({id:'book-featured-3',name:'The Alchemist',price:13.99,image:'https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=200&q=60'})">
+                <i class="bi bi-bag-plus me-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <div class="d-flex justify-content-center mt-4 gap-2">
+      <a href="books.html" class="btn-teal text-decoration-none" style="font-size:0.85rem;padding:0.55rem 1.4rem;">See All Books</a>
+      <a href="stationery.html" class="btn-outline-dark-custom text-decoration-none" style="font-size:0.85rem;padding:0.55rem 1.4rem;">Shop Stationery</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BESTSELLING PRODUCTS ===== -->
+<section class="section-white">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="section-label">Top Sellers</span>
+      <h2 class="section-title">Bestselling Products</h2>
+      <p class="section-subtitle mx-auto mt-2">Our most loved books and stationery — chosen by readers and writers like you.</p>
+    </div>
+    <div class="row g-4">
+
+      <div class="col-sm-6 col-lg-3 fade-up fade-up-delay-1">
+        <div class="product-card">
+          <div class="product-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&q=80" alt="To Kill a Mockingbird">
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-label">Classic</div>
+            <div class="product-card-title">To Kill a Mockingbird</div>
+            <div class="product-card-author">Harper Lee</div>
+            <div class="product-card-stars">★★★★★ <span class="review-count">(2.4k)</span></div>
+            <div class="product-card-price">$14.99</div>
+            <button class="btn-add-cart" onclick="addToCart({id:'bs-1',name:'To Kill a Mockingbird',price:14.99,image:'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200&q=60'})">
+              <i class="bi bi-bag-plus me-1"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 fade-up fade-up-delay-2">
+        <div class="product-card">
+          <div class="product-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=400&q=80" alt="Bullet Journal">
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-label">Stationery</div>
+            <div class="product-card-title">Dotted Bullet Journal</div>
+            <div class="product-card-author">Premium A5</div>
+            <div class="product-card-stars">★★★★★ <span class="review-count">(1.8k)</span></div>
+            <div class="product-card-price">$22.50</div>
+            <button class="btn-add-cart" onclick="addToCart({id:'bs-2',name:'Dotted Bullet Journal',price:22.50,image:'https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=200&q=60'})">
+              <i class="bi bi-bag-plus me-1"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 fade-up fade-up-delay-3">
+        <div class="product-card">
+          <div class="product-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=400&q=80" alt="1984">
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-label">Fiction</div>
+            <div class="product-card-title">1984</div>
+            <div class="product-card-author">George Orwell</div>
+            <div class="product-card-stars">★★★★★ <span class="review-count">(3.1k)</span></div>
+            <div class="product-card-price">$12.99</div>
+            <button class="btn-add-cart" onclick="addToCart({id:'bs-3',name:'1984',price:12.99,image:'https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=200&q=60'})">
+              <i class="bi bi-bag-plus me-1"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 fade-up fade-up-delay-3">
+        <div class="product-card">
+          <div class="product-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=400&q=80" alt="Watercolor Set">
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-label">Art Supplies</div>
+            <div class="product-card-title">24-Color Watercolor Set</div>
+            <div class="product-card-author">Artist Grade</div>
+            <div class="product-card-stars">★★★★☆ <span class="review-count">(942)</span></div>
+            <div class="product-card-price">$38.00</div>
+            <button class="btn-add-cart" onclick="addToCart({id:'bs-4',name:'24-Color Watercolor Set',price:38.00,image:'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=200&q=60'})">
+              <i class="bi bi-bag-plus me-1"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="section-label">What Our Customers Say</span>
+      <h2 class="section-title">Loved by Readers</h2>
+    </div>
+    <div class="row g-4">
+
+      <div class="col-md-4 fade-up fade-up-delay-1">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">This shop has completely changed the way I read. The curation is impeccable — every book I've picked from here has become a favourite. The stationery is equally wonderful.</p>
+          <div class="stars-gold mb-2">★★★★★</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#e8f4f6;color:#2a7c8a;font-weight:700;">S</div>
+            <div>
+              <div class="testimonial-name">Sarah M.</div>
+              <div class="testimonial-role">Avid Reader, London</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 fade-up fade-up-delay-2">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">I ordered a leather notebook as a gift and it arrived beautifully packaged. The quality exceeded my expectations. The Ink &amp; Page Shop is my go-to for thoughtful gifts.</p>
+          <div class="stars-gold mb-2">★★★★★</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#fef3e2;color:#f4a917;font-weight:700;">J</div>
+            <div>
+              <div class="testimonial-name">James R.</div>
+              <div class="testimonial-role">Writer, New York</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 fade-up fade-up-delay-3">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Finally a bookshop that feels personal! The website is beautiful and the recommendations are spot-on. I've discovered so many books I never would have found on my own.</p>
+          <div class="stars-gold mb-2">★★★★★</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#f3e8f6;color:#7c3a8a;font-weight:700;">A</div>
+            <div>
+              <div class="testimonial-name">Anika P.</div>
+              <div class="testimonial-role">Teacher, Toronto</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-7 fade-up">
+        <span class="section-label" style="color:rgba(255,255,255,0.7);">Stay in the Loop</span>
+        <h2 class="newsletter-title">New Arrivals, Every Week</h2>
+        <p class="newsletter-sub">Join 8,000+ book lovers and get exclusive picks, author features, and shop updates delivered to your inbox.</p>
+        <form class="newsletter-form mx-auto" onsubmit="return false;">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:1rem;">No spam, ever. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand"><i class="bi bi-book-half me-2 icon-teal"></i>The Ink &amp; Page Shop</div>
+        <p class="footer-desc">A carefully curated bookstore and stationery boutique for readers, writers, and creative minds. Every item we carry has been chosen with love.</p>
+        <div class="footer-social mt-3">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-pinterest"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="books.html">Books</a></li>
+          <li><a href="stationery.html">Stationery</a></li>
+          <li><a href="books.html">New Arrivals</a></li>
+          <li><a href="books.html">Bestsellers</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Info</div>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-heading">Visit Us</div>
+        <p class="footer-contact-item"><i class="bi bi-geo-alt me-2 icon-teal"></i>42 Bookbinder Lane, Notting Hill, London W11 2HQ</p>
+        <p class="footer-contact-item"><i class="bi bi-telephone me-2 icon-teal"></i>+44 20 7946 0123</p>
+        <p class="footer-contact-item"><i class="bi bi-envelope me-2 icon-teal"></i>hello@inkandpageshop.com</p>
+        <p class="footer-contact-item"><i class="bi bi-clock me-2 icon-teal"></i>Mon–Sat 9am–7pm · Sun 10am–5pm</p>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <p class="footer-copy mb-0">© 2025 The Ink &amp; Page Shop. All rights reserved.</p>
+      <p class="footer-copy mb-0">Crafted with <span class="icon-teal">♥</span> for book lovers everywhere</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== CART OFFCANVAS ===== -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel" style="width:380px;max-width:96vw;">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title"><i class="bi bi-bag me-2 icon-teal"></i>Your Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body" style="padding:0 1.25rem;overflow-y:auto;">
+    <div id="cart-items-container"></div>
+  </div>
+  <div id="cart-footer" class="cart-footer" style="padding:1.25rem;display:none;">
+    <div class="cart-subtotal">
+      <span class="cart-subtotal-label">Subtotal</span>
+      <span class="cart-subtotal-value" id="cart-subtotal">$0.00</span>
+    </div>
+    <button id="checkout-btn" class="btn-teal w-100 mb-2">
+      <i class="bi bi-credit-card me-2"></i>Proceed to Checkout
+    </button>
+    <button class="btn-outline-dark-custom w-100" style="font-size:0.82rem;padding:0.55rem 1rem;" data-bs-dismiss="offcanvas">Continue Shopping</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
